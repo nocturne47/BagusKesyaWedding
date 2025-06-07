@@ -471,8 +471,8 @@ footer li {
     font-size: 65%;
   }
   .hero::before {
-    top: 10rem;
-    padding-top: 10rem;
+    top: 15rem;
+    /* padding-top: 15rem; */
     background-position: none;
   }
   .simply-countdown > .simply-section {
