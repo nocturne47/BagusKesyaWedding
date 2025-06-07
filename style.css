@@ -473,6 +473,7 @@ footer li {
   .hero::before {
     top: 10rem;
     padding-top: 10rem;
+    background-position: none;
   }
   .simply-countdown > .simply-section {
     padding: 40px;
