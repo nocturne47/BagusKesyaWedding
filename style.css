@@ -38,6 +38,7 @@ body {
   font-family: "Great Vibes", cursive;
   font-size: 6rem;
   color: var(--main);
+  text-shadow: var(--shadow);
 }
 
 .hero h4 {
@@ -63,7 +64,7 @@ body {
   background-image: url(img/prewed.JPG);
   z-index: -1;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   /* filter: grayscale(); */
 }
 .hero a:hover {
