@@ -9,6 +9,7 @@ body {
   /* font-family: work sans,sans-serif; */
   /* min-height: 4000px; */
   font-family: "Lora", sans-serif;
+  background-color: #f0e5df;
 }
 
 .hero::before {
@@ -37,10 +38,12 @@ body {
 .hero h1 {
   font-family: "Great Vibes", cursive;
   font-size: 6rem;
-  color: var(--main);
+  color: darkblue;
   text-shadow: var(--shadow);
 }
-
+.hero #namaTamu {
+  color: darkblue;
+}
 .hero h4 {
   font-size: 1.6rem;
 }
@@ -65,7 +68,7 @@ body {
   z-index: -1;
   background-size: cover;
   background-position: top;
-  /* filter: grayscale(); */
+  filter: blur();
 }
 .hero a:hover {
   color: var(--main);
@@ -165,8 +168,9 @@ body {
   color: #4a4a4a;
   box-shadow: var(--shadow);
   background-color: var(--main);
-  border-radius: 20%;
+  /* border-radius: 20%; */
   border: none;
+  font-size: larger;
 }
 
 .info .btn:hover {
@@ -424,6 +428,7 @@ footer li {
   html {
     font-size: 75%;
   }
+
   .simply-countdown > .simply-section {
     padding: 45px;
   }
@@ -465,7 +470,10 @@ footer li {
   html {
     font-size: 65%;
   }
-
+  .hero::before {
+    top: 10rem;
+    padding-top: 10rem;
+  }
   .simply-countdown > .simply-section {
     padding: 40px;
     margin: 3px;
@@ -474,6 +482,7 @@ footer li {
     font-size: 2rem;
     text-align: center;
   }
+
   .sticky-top {
     overflow: hidden;
   }
