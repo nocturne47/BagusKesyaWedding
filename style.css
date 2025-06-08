@@ -38,11 +38,11 @@ body {
 .hero h1 {
   font-family: "Great Vibes", cursive;
   font-size: 6rem;
-  color: darkblue;
+  color: black;
   text-shadow: var(--shadow);
 }
 .hero #namaTamu {
-  color: darkblue;
+  color: black;
 }
 .hero h4 {
   font-size: 1.6rem;
@@ -110,7 +110,7 @@ body {
 .gallery h2,
 .rsvp h2,
 .gifts h2 {
-  color: var(--main);
+  color: black;
   font-family: "Great Vibes";
   font-size: 5rem;
   font-weight: bold;
