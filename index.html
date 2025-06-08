@@ -595,7 +595,14 @@
         </div>
       </div>
     </footer>
-
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="audio/music.mp3" type="audio/mp3" />
+      </audio>
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
     <script>
       function salin(index) {
         const norekList = document.querySelectorAll("#norek");
@@ -619,6 +626,7 @@
       const params = new URLSearchParams(window.location.search);
       const nama = params.get("nama") || "Tamu Undangan";
       document.getElementById("namaTamu").innerText = decodeURIComponent(nama);
+      document.querySelector("#nama").value = nama;
     </script>
 
     <script>
@@ -684,6 +692,10 @@
 
     <script>
       const rootElement = document.querySelector(":root");
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      let isPlaying = false;
+      const song = document.querySelector("#song");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
 
       function disableScroll() {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -698,12 +710,30 @@
       function enableScroll() {
         window.onscroll = function () {};
         rootElement.style.scrollBehavior = "smooth";
-        localStorage.setItem("opened", "true");
+        // localStorage.setItem("opened", "true");
+        playAudio();
       }
+      function playAudio() {
+        song.volume = 0.5;
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
+      }
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.add("bi-disc");
+          audioIcon.classList.remove("bi-pause-circle");
+        }
+        isPlaying = !isPlaying;
+      };
 
-      if (!localStorage.getItem("opened")) {
-        disableScroll();
-      }
+      // if (!localStorage.getItem("opened")) {
+      // }
 
       disableScroll();
     </script>
